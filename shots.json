@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-cover.jpg","path":"/?earned=2,3,4,8,21&counts=15:120,17:18,19:7,32:22,52:60000&open=2","viewport":{"height":800,"width":1280}},{"file":"2-counters.jpg","path":"/?kind=activities&counts=15:250,17:42,19:20,32:50,52:125000&open=15","viewport":{"height":800,"width":1280}},{"file":"3-missable.jpg","path":"/?kind=missable&open=22","viewport":{"height":800,"width":1280}},{"file":"4-spoiler.jpg","path":"/?spoiler=1&kind=story&earned=2","viewport":{"height":800,"width":1280}}]
