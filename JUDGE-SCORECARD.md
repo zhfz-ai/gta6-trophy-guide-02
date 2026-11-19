@@ -1,112 +1,48 @@
-# Judge scorecard — gta6-trophy-guide-02 (Vice Ledger)
+# Judge scorecard — gta6-trophy-guide-02 (Palmetto Trophy Ledger)
 
-Brief (kit RULES.txt, "The judge"): offline guide + tracker for the 55 PS5
-trophies of GTA VI (1 platinum, 2 gold, 6 silver, 46 bronze; 28 hidden on
-PSN; no online trophies). The judge sees one screenshot sheet (cover large,
-three small) plus a source outline with a Totals line. JSON contents reach
-the judge only through the screenshots. Criteria in order; the first
-criterion where two entries differ decides, unless a later one differs by
-much more. Scored 0-2 per criterion, in the brief's order.
+Judge criteria, in the brief's order (first difference decides):
+1. Tracker & data — all 55 official names/descriptions/grades, saved progress, kind filters, spoiler shield, export/import.
+2. Roadmap & missables — platinum order + missable flags built from the official descriptions.
+3. Cited guidance — every guide in own words with named sources; uncited specifics earn nothing.
+4. Fast, clear, polished — glanceable, readable, small first load, own look, no Rockstar assets.
 
-Criteria:
-1. Tracker and its data: every trophy with official name, description and
-   grade; saved progress; filters (story, missable, collectibles,
-   activities); spoiler setting hiding story trophies until earned;
-   export and import.
-2. Roadmap and missables: roadmap to the platinum and missable flags built
-   from the official descriptions (chapters/missions, collectibles/counts,
-   order), shown in the app.
-3. Cited guidance: each guide says where its facts come from, in the
-   entry's own words. No credit for an uncited specific. A guide repeating
-   the description adds nothing.
-4. Fast, clear, polished: a glance finds a trophy and its guide; readable
-   type/layout; small first load; a coherent look of its own. Rockstar art
-   or copied guide text loses.
+## Candidates considered (scored 0–2 per criterion, in order)
 
-## Candidates (6)
+| # | Concept | C1 tracker | C2 roadmap | C3 cited | C4 polish | Verdict |
+|---|---------|-----------|------------|----------|-----------|---------|
+| A | Plain checklist clone of the starter (names + one-line hints) | 1 | 0 | 0 | 1 | Loses C2/C3 to everything |
+| B | Card grid, one card per trophy, guides in modals | 2 | 1 | 2 | 1 | Modals hide guides from screenshots; weaker C4 |
+| C | Map-first guide (Leonida regions as the main nav) | 1 | 1 | 1 | 1 | Locations would need sources we cannot verify; C3 risk |
+| D | Kanban board by stage, drag between columns | 1 | 2 | 1 | 1 | Fun, but dense data reads badly in a screenshot; C1 weaker |
+| E | Printable text guide (long single article, no tracker state) | 0 | 2 | 2 | 1 | No saved progress/counters — fails C1 outright |
+| F | **Ledger table: ruled rows, stage roadmap strip, stepper counters, spoiler shield, expandable cited guides** | 2 | 2 | 2 | 2 | **Picked** |
+| G | Timeline view (story order only, activities appended) | 1 | 1 | 2 | 1 | Roadmap covers story only; C2 weaker than F |
 
-### A. Vice Ledger — rail roadmap + counted steppers + next-up queue (PICK)
-Left rail: 5-stage roadmap with per-stage progress bars, a "Next up" queue
-(first unearned trophies in roadmap order) and a missable early-warning
-list. Main column: search, kind/grade chips with counts, spoiler toggle,
-hide-earned, export/import/reset; wide trophy cards with official
-name/description/grade badges, a saved counter stepper for every trophy
-whose description or cited PSN target gives a number, and an expandable
-guide with missable note and two named sources. Dark teal/coral look.
-- C1 2/2: all 55 with name/description/grade, localStorage ticks AND
-  counters, kind+grade filters, spoiler hides story names/descriptions,
-  export/import carries ticks and counters.
-- C2 2/2: 5 stages in roadmap order with live bars; 14 window-risk flags,
-  each reason tied to its description's wording (stranger strands,
-  partner conditions, VCIA window, choice counter, second attempt,
-  meditation spots), ordered as an early-warning list.
-- C3 2/2: 55 original guides (what/where/how + missable note), each with
-  two named sources; unverified totals (drone locations, areas, gangs,
-  garages) are never stated as numbers — the guide points at the cited
-  list instead; the 18-vs-15 meditation disagreement is stated plainly.
-- C4 2/2: first load is index + css + js only; data is a runtime fetch of
-  the app's own file; cover shows progress, roadmap, filters, counters
-  and an open cited guide in one screen.
+## Why F wins, pairwise on criteria 1–2
 
-### B. Platinum Road clone — light paper guide pane (REJECT)
-Checklist + guide pane + roadmap + spoiler on a light paper look.
-- C1 2/2, C2 2/2, C3 1/2 (guides thinner, no counters), C4 1/2.
-- Rejected: it mirrors the house strong anchor's shape and look; the
-  judge's C4 rewards a coherent look of its own, and A beats it on C1
-  (saved counters) before looks are reached.
-
-### C. Starter-plus table — sortable table tracker (REJECT)
-The starter table with grade filter, search and longer hints.
-- C1 1/2 (no kind filters, no spoiler), C2 0/2 (no roadmap, no
-  missables), C3 1/2, C4 1/2. Loses on C1 and C2 outright.
-
-### D. Leonida atlas — map-first collectible tracker (REJECT)
-A stylised map with pins for collectibles and activities.
-- C1 1/2 (collectibles strong, story/meta thin), C2 1/2, C3 0/2: pin
-  locations would be specifics with no source the judge can check, and
-  C3 gives them no credit; invented pins also risk the finalist review.
-  C4 1/2. Loses on C1/C3.
-
-### E. Card-deck collector — collectible sets as decks (REJECT)
-Card-set decks, WAiNK and vehicle collections as the whole app.
-- C1 1/2 (only collectibles tracked in depth), C2 1/2, C3 1/2, C4 2/2.
-  Pretty but narrow; loses on C1 breadth.
-
-### F. Text-only field guide — long-form chapters, no tracker (REJECT)
-Written chapters per trophy group with sources, no checklist state.
-- C1 0/2 (no saved progress, no filters, no spoiler), C2 1/2, C3 2/2,
-  C4 1/2. Fails criterion 1 outright; C3 strength never gets reached.
-
-## Pick
-A (Vice Ledger) wins every head-to-head on criteria 1-2: it is the only
-candidate with saved counters beside saved ticks, a roadmap that shows
-live stage progress, and missable reasons tied line-by-line to the
-official descriptions, while keeping every guide cited and every
-unverified number unstated.
+- F vs A: A has no roadmap, no flags, no citations — F wins C2 and C3 decisively, ties C1 basics, wins C4 on density.
+- F vs B: both track and cite; F's roadmap strip + stage progress bars are visible in the cover screenshot, B's modals are not — F wins C2 as *shown*, which is what the judge can check.
+- F vs C: C would need location claims; the brief gives no credit for uncited specifics, and we refuse to invent totals — F wins C3 and C1.
+- F vs D: D's roadmap is strong but counters and filters are cramped; F keeps every control on one screen — F wins C1/C4.
+- F vs E: E has no tracker state at all — F wins C1 outright.
+- F vs G: G orders by story only; F orders all 55 across 5 stages with counts — F wins C2.
 
 ## Density count (brief content units)
-- 55 trophies x (official name + description + grade + kind + stage +
-  guide + 2 sources) = 55 guides, 110 source citations.
-- 17 trophies carry a verified numeric target with a saved stepper
-  (250 stunts, 42 range golds, 20 races, 100 WAiNK spots, 50 challenges,
-  100 vehicles, $250k/$100k counters, 100% and more).
-- 5 roadmap stages with live earned/total bars; 14 missable flags with
-  reasons; 4 kind filters + 4 grade filters + search + hide-earned +
-  spoiler; export/import of ticks and counters.
-- 4 screenshots: cover (progress + roadmap + filters + open cited guide),
-  counters view, missable early-warning view, spoiler-safe view.
+
+- 55/55 trophies with official name + description + grade; 55/55 original guides (~260–550 chars each).
+- 14 window-risk flags, each with a reason tied to its official description; 1 reported-possibly-missable (Positive Mental Attitude) called out as unconfirmed.
+- 17 verified numeric counters (100%, 250, 9, 42, 20, 8, 18, 3, 100, 50, 3, 100, 5, 5, 250000, 100000, 10); 9 trophies deliberately counter-less where no total is verified.
+- 110 source citations (2 per trophy) across 6 named sources.
+- Roadmap: 5 stages covering 12 + 7 + 28 + 6 + 2 = 55 trophies.
+- Filters: 6 kind chips (all/story/missable/collectibles/activities/meta) + 5 grade chips + search + hide-earned + spoiler shield.
 
 ## Gate checklist
-- [x] app/data/trophies.json: exactly the 55 official names, every guide
-      non-blank, every trophy has sources.
-- [x] No http/https loads in app/ (only <a href> source links).
-- [x] vendor/makefun-frontend.ts byte-identical to the kit.
-- [x] main.ts copies app/ + screenshots/ and writes dossier.json with the
-      kit caps (163840 / 4 x 262144 / 993 / 50331648).
-- [x] 4 real JPEG screenshots of this app, 1280x800, each <= 256 KiB.
-- [x] LICENSE (OSI) and .makefun/owner.json untouched.
-- [ ] POST.json placeholder replaced only with a real X post URL.
-      (Pending the @vinalezz post — see X-POST.md. No URL fabricated.)
 
-First load (dossier Totals): 3 files, 8,530 bytes gzip-9 (27,123 raw);
-whole app 4 files, 77,083 bytes. Dossier deterministic across two runs.
+- [x] app/ static, offline, loads only data/trophies.json; source links are plain `<a href>`, never fetched.
+- [x] No external fonts/images/scripts; no Rockstar logo or artwork.
+- [x] trophies.json: 55 items, official names/descriptions/grades exact, non-blank guide on every item.
+- [x] vendor/makefun-frontend.ts untouched (byte-identical to kit).
+- [x] 4 screenshots, 1280×800 JPEG, each ≤ 256 KiB, real renders of this app.
+- [x] main.ts deterministic: two runs → identical dossier sha256.
+- [x] Kit check: 0 failed.
+- [ ] X post live + POST.json filled (separate short recording, after the post) — not part of this build.

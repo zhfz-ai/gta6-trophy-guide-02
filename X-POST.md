@@ -1,34 +1,28 @@
-# X post for gta6-trophy-guide-02 — READY TO POST (blocker: needs @vinalezz)
+# X post for gta6-trophy-guide-02 — ready to post (blocker: needs the @vinalezz account)
 
-Status: NOT POSTED YET. X login from the cloud browser is rate-limited
-(account_restricted before the password step, verified 2026-11-19), so this
-post must be made by the account holder from their phone. Do not submit the
-entry until POST.json holds the real post URL — the entry_link check refuses
-a placeholder, a post with no picture, a post outside the window
-(2026-11-19T14:00Z to 2026-11-21T14:00Z), or a post missing make.fun /
-@makefunai / the play code.
+The post is a requirement of the entry and is never judged. It must be public, carry a picture of
+the guide, say what was built and that it is a make.fun bounty paying real money, and include the
+bounty link (or make.fun written out) plus the play code below. Post text cannot be edited later —
+check every element before posting.
 
-## Post this exact text (252 characters, fits a non-premium account)
+## Post text (verbatim — 263 characters, under the 280 limit)
 
-I built Vice Ledger, an offline GTA 6 trophy guide & tracker (all 55 trophies, platinum roadmap, missable warnings) for a make.fun bounty paying $250 in real rewards. https://make.fun/bounty/gta6-trophy-guide-02 @makefunai makefun-sawmill-isthmus-cable
+I built Palmetto Trophy Ledger, an offline GTA 6 trophy guide & tracker (all 55 trophies, platinum roadmap, missable warnings) for a make.fun bounty paying $250 in real rewards. https://make.fun/bounty/gta6-trophy-guide-02 @makefunai makefun-sawmill-isthmus-cable
 
-## Attach this picture (first picture must be a screenshot of the guide)
+## Attachment
 
-screenshots/1-cover.jpg (in this repo; also saved beside the entry as the
-cover screenshot). PNG/JPEG/WebP only — no GIF/video-only posts.
+Attach `screenshots/1-cover.jpg` as the first (only) picture — a real screenshot of the guide.
 
 ## Checklist before posting
 
-- [ ] Account is public (not protected) and stays public until results.
-- [ ] Text above pasted verbatim (play code `makefun-sawmill-isthmus-cable`
-      is code 0 of 4 for account zhfz in this bounty; any of the 4 passes).
-- [ ] 1-cover.jpg attached as the first picture.
-- [ ] Post made between 2026-11-19T14:00Z and 2026-11-21T14:00Z.
+- [ ] Account @vinalezz is public (not protected).
+- [ ] Text pasted exactly as above: bounty link, @makefunai tag, play code `makefun-sawmill-isthmus-cable`.
+- [ ] `screenshots/1-cover.jpg` attached as the picture.
+- [ ] Posted after the competition opened and before entries close (2026-11-21T14:00:00Z).
+- [ ] Keep the post up and the account public until results are out.
 
-## After posting
+## After the post is live
 
-1. Copy the post link (Share → Copy link): https://x.com/vinalezz/status/<id>
-2. Write it into POST.json at the repo root: {"url": "https://x.com/vinalezz/status/<id>"}
-   (do this inside a fresh short recording so the edit is witnessed, then
-   commit and push).
-3. Submit from the kit dir naming both recordings (see builder report).
+1. Copy the post URL (Share → Copy link): `https://x.com/vinalezz/status/<id>`.
+2. In a NEW short recording, write that URL into `POST.json` (replacing the placeholder), commit, and seal.
+3. Submit with both recordings (the build recording + the POST.json recording) and the final commit sha.

@@ -3,83 +3,73 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vice Ledger — GTA VI Trophy Guide &amp; Tracker</title>
-<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: counted-progress steppers, 5-stage platinum roadmap, missable early warnings, cited guides.">
+<title>Palmetto Trophy Ledger — GTA VI platinum guide &amp; tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 GTA VI PS5 trophies: roadmap, missable warnings, counters, cited guides.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="masthead">
-  <div class="brand">
-    <div class="brand-seal" aria-hidden="true">VL</div>
+  <div class="masthead-inner">
     <div>
-      <h1>Vice Ledger</h1>
-      <p class="tagline">Grand Theft Auto VI &middot; PS5 trophy guide &amp; tracker &middot; 55 trophies &middot; works offline</p>
+      <h1>Palmetto Trophy Ledger</h1>
+      <p class="tagline">Every one of the 55 GTA VI trophies on one page — roadmap, window-risk flags, saved counters, cited guides. Works fully offline.</p>
     </div>
-  </div>
-  <div class="tally" role="status" aria-label="Overall progress">
-    <div class="tally-line"><strong id="tally-count">0 / 55 earned</strong><span id="tally-pct">0%</span></div>
-    <div class="tally-bar"><div id="tally-fill"></div></div>
-    <div class="tally-grades" id="tally-grades"></div>
-    <p class="tally-note">28 of the 55 are hidden on PSN until earned &middot; no online trophies</p>
+    <div class="scorebox" aria-label="Overall progress">
+      <div class="score-big"><span id="earned-count">0</span><span class="score-of"> / 55 earned</span></div>
+      <div class="score-bar"><div id="score-fill"></div></div>
+      <div class="grade-line" id="grade-line">Platinum 0/1 · Gold 0/2 · Silver 0/6 · Bronze 0/46</div>
+      <div class="score-note">28 of the 55 are hidden on PSN · no online trophies in this list</div>
+    </div>
   </div>
 </header>
 
-<div class="layout">
-  <aside class="rail" aria-label="Roadmap and warnings">
-    <section class="rail-card" aria-label="Roadmap to platinum">
-      <h2>Roadmap to the platinum</h2>
-      <p class="rail-sub">5 stages, built from the official descriptions</p>
-      <ol class="stage-list" id="stage-list"></ol>
-    </section>
-    <section class="rail-card" aria-label="Next up">
-      <h2>Next up</h2>
-      <p class="rail-sub">First unearned trophies in roadmap order</p>
-      <ul class="next-list" id="next-list"></ul>
-    </section>
-    <section class="rail-card warn" aria-label="Missable early warnings">
-      <h2>Missable early warnings</h2>
-      <p class="rail-sub">Window-risk flags from the descriptions' own wording</p>
-      <ul class="warn-list" id="warn-list"></ul>
-      <p class="warn-foot">Only Positive Mental Attitude is reported as possibly missable (GTABase / PowerPyx, unconfirmed). The rest are flagged because their descriptions depend on a person, a partner, a place or a one-time choice.</p>
-    </section>
-  </aside>
+<section class="roadmap" aria-label="Platinum roadmap">
+  <h2>Roadmap to the platinum — work the stages in order</h2>
+  <ol id="stage-list" class="stage-list"></ol>
+</section>
 
-  <main class="board">
-    <section class="panel controls" aria-label="Filters and settings">
-      <div class="controls-row">
-        <label class="search-box">
-          <span class="sr-only">Search trophies</span>
-          <input id="search" type="search" placeholder="Search name or description&hellip;" autocomplete="off">
-        </label>
-        <label class="toggle">
-          <input id="spoiler" type="checkbox">
-          <span>Spoiler-safe: hide story trophies until earned</span>
-        </label>
-        <label class="toggle">
-          <input id="hide-earned" type="checkbox">
-          <span>Hide earned</span>
-        </label>
-      </div>
-      <div class="controls-row chips" id="kind-chips" role="group" aria-label="Filter by kind"></div>
-      <div class="controls-row chips" id="grade-chips" role="group" aria-label="Filter by grade"></div>
-      <div class="controls-row actions">
-        <button id="export" type="button">Export progress</button>
-        <button id="import-btn" type="button">Import progress</button>
-        <input id="import-file" type="file" accept="application/json,.json" hidden>
-        <button id="reset" type="button" class="danger">Reset all</button>
-        <span class="save-note" id="save-note">Ticks and counters save in this browser (localStorage).</span>
-      </div>
-    </section>
+<section class="toolbar" aria-label="Filters and settings">
+  <div class="filter-row">
+    <span class="filter-label">Show</span>
+    <div id="kind-filters" class="chip-row" role="group" aria-label="Filter by kind"></div>
+    <span class="filter-label">Grade</span>
+    <div id="grade-filters" class="chip-row" role="group" aria-label="Filter by grade"></div>
+  </div>
+  <div class="filter-row">
+    <label class="search-box">Find <input id="search" type="search" placeholder="name, description, guide…" autocomplete="off"></label>
+    <label class="toggle"><input id="hide-earned" type="checkbox"> Hide earned</label>
+    <label class="toggle"><input id="spoiler" type="checkbox"> Spoiler shield (hide story names)</label>
+    <span class="result-count" id="result-count"></span>
+  </div>
+  <div class="filter-row">
+    <button id="export-btn" type="button">Export progress (JSON)</button>
+    <label class="import-label">Import progress <input id="import-file" type="file" accept=".json,application/json"></label>
+    <button id="reset-btn" type="button">Reset all progress</button>
+    <span class="save-note">Progress, counters and settings save in this browser automatically.</span>
+  </div>
+</section>
 
-    <p class="result-line" id="result-line" role="status"></p>
-    <section class="cards" id="cards" aria-label="Trophy checklist"></section>
-    <p class="empty" id="empty" hidden>No trophies match the current filters.</p>
+<main>
+  <table class="ledger" aria-label="Trophy ledger">
+    <thead>
+      <tr>
+        <th class="col-check">Got it</th>
+        <th class="col-id">#</th>
+        <th class="col-name">Trophy (official name &amp; description)</th>
+        <th class="col-grade">Grade</th>
+        <th class="col-kind">Kind</th>
+        <th class="col-count">Counter</th>
+        <th class="col-guide">Guide</th>
+      </tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <p id="empty-note" class="empty-note" hidden>No trophies match these filters. Loosen a filter or clear the search.</p>
+</main>
 
-    <footer class="foot">
-      <p>Official trophy names, descriptions and grades as published on PlayStation (55 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze; 28 hidden until earned; no online trophies). Every guide is written for this entry and names its sources beside the text — sources are cited, never copied. Where the official description gives no number, this guide states none and points at the cited list. Missable flags are derived from the official descriptions: stranger strands, partner conditions, a story-window airport, choice and second-attempt counters, and every-spot sweeps.</p>
-    </footer>
-  </main>
-</div>
+<footer class="colophon">
+  <p>Names, descriptions and grades are PlayStation's official list (55 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze). Guides are written for this page and cite two sources each — PSNProfiles, Exophase, PowerPyx, GTA Wiki, Press Start and EGamers. Counts appear only where the official text or the cited sources verify a total; where they disagree (meditation spots: 18 per GTABase, 15 on the 100% checklist) the guide says so. This page loads nothing from the network; source links open only when you follow them.</p>
+</footer>
 
 <script src="app.js"></script>
 </body>
